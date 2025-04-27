@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $sql)) {
         echo "Thank you for contacting us!";
-        header("Location: feedback.html"); // Redirect back to contact page
+        header("Location: feedback.html");
         exit();
     } else {
         echo "Error: " . mysqli_error($conn);
