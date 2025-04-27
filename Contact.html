@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+img {
+        width: 250px;
+        -webkit-filter: drop-shadow(5px 3px 0px #666666);
+        filter: drop-shadow(1.5px 1.5px 1.5px #666666);
+      }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<script>
+  // JavaScript function to validate email before submitting
+  function validateForm(event) {
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address!");
+      event.preventDefault(); // Stop the form from submitting
+      return false;
+    }
+  }
+  </script>
+</head>
+<body>
+
+<a href="Home.html">
+  <img src="https://static.thenounproject.com/png/3466561-200.png" link="Home.html" style="width:60px; height:60px">
+</a>
+
+<h2 align="center">Contact Form</h2>
+<p align="center">Express your inconvenience we'll try to resolve it, Thankyou for your patience.</p>
+
+<div class="container">
+  <form action="contact.php" method="POST" onsubmit="validateForm(event)">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="email">Email id</label>
+    <input type="text" id="email" name="email" placeholder="Email id.." required>
+
+   
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <button type="submit">SUBMIT</button>
+  </form>
+</div>
+
+
+</body>
+</html>
