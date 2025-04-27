@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -59,33 +58,23 @@ button[type=submit]:hover {
   </script>
 </head>
 <body>
-
 <a href="Home.html">
   <img src="https://static.thenounproject.com/png/3466561-200.png" link="Home.html" style="width:60px; height:60px">
 </a>
-
 <h2 align="center">Contact Form</h2>
 <p align="center">Express your inconvenience we'll try to resolve it, Thankyou for your patience.</p>
-
 <div class="container">
   <form action="contact.php" method="POST" onsubmit="validateForm(event)">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-
     <label for="email">Email id</label>
     <input type="text" id="email" name="email" placeholder="Email id.." required>
-
-   
-
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     <button type="submit">SUBMIT</button>
   </form>
 </div>
-
-
 </body>
 </html>
